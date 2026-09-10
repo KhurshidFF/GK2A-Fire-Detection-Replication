@@ -49,7 +49,7 @@ Main functions include:
 - binary fire-mask generation
 - DQF generation
 
-The algorithm expects calibrated brightness temperatures and reflectances rather than raw digital numbers. :contentReference[oaicite:0]{index=0}
+The algorithm expects calibrated brightness temperatures and reflectances rather than raw digital numbers. 
 
 ### `gk2a_inputs.py`
 
@@ -61,8 +61,7 @@ Generates auxiliary inputs used by the fire algorithm, including:
 - urban/cropland/bare-soil mask
 - topographic reference pixels
 
-The `build_all_inputs()` function can generate these inputs together. :contentReference[oaicite:1]{index=1}
-
+The `build_all_inputs()` function can generate these inputs together. 
 ### `run_example.py`
 
 Example workflow showing how to:
@@ -74,7 +73,7 @@ Example workflow showing how to:
 - create fire-point coordinates
 - export GeoJSON and NumPy outputs
 
-The example currently uses case-specific file paths and should be modified for the user's own data. :contentReference[oaicite:2]{index=2}
+The example currently uses case-specific file paths and should be modified for the user's own data. 
 
 ---
 
@@ -84,7 +83,7 @@ The example currently uses case-specific file paths and should be modified for t
 
 Generates/corrects the GK2A full-disk latitude and longitude grid using the CGMS geostationary projection convention.
 
-The current implementation uses the GK2A sub-satellite longitude near **128.2°E** and a 5500 × 5500 full-disk grid. :contentReference[oaicite:3]{index=3}
+The current implementation uses the GK2A sub-satellite longitude near **128.2°E** and a 5500 × 5500 full-disk grid. 
 
 ### `make_cloud_mask.py`
 
@@ -98,7 +97,7 @@ The current interpretation is:
 2 = clear
 ```
 
-Only clear pixels are treated as cloud-free. :contentReference[oaicite:4]{index=4}
+Only clear pixels are treated as cloud-free. 
 
 ### `make_land_mask.py`
 
@@ -114,7 +113,7 @@ Converts the GK2A land/sea mask into a boolean land mask.
 
 Resamples a DEM to the GK2A grid for use in topographic temperature correction.
 
-The current example uses a Korea SRTM DEM. :contentReference[oaicite:5]{index=5}
+The current example uses a Korea SRTM DEM. 
 
 ---
 
@@ -153,7 +152,7 @@ Longitude: 124°E – 132°E
 Latitude : 33°N – 39.5°N
 ```
 
-:contentReference[oaicite:6]{index=6}
+
 
 ---
 
@@ -227,8 +226,7 @@ Then run:
 python run_example.py
 ```
 
-The example uses `build_all_inputs()` to generate SZA, VZA, industrial, and land-cover rejection masks before passing the data to the main fire-detection algorithm. :contentReference[oaicite:7]{index=7}
-
+The example uses `build_all_inputs()` to generate SZA, VZA, industrial, and land-cover rejection masks before passing the data to the main fire-detection algorithm. 
 ---
 
 ## Outputs
@@ -248,7 +246,7 @@ LON_*.npy
 FF_*.geojson
 ```
 
-The GeoJSON output contains the geographic locations of detected fire pixels and can be opened directly in GIS software such as QGIS. :contentReference[oaicite:8]{index=8}
+The GeoJSON output contains the geographic locations of detected fire pixels and can be opened directly in GIS software such as QGIS. 
 
 ---
 
